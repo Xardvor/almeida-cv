@@ -11,8 +11,8 @@
             }
 
             &:hover ~ li {
-                background-color: $color-primary;
-                color: $color-light;
+                background-color: $color-right-col-icon-background;
+                color: $color-icon-primary;
             }
 
         }
@@ -30,8 +30,8 @@
             }
 
             &:hover {
-                background-color: $color-primary;
-                color: $color-light;
+                background-color: $color-right-col-icon-background;
+                color: $color-icon-primary;
             }
         }
     }
