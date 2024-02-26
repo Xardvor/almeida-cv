@@ -3,7 +3,13 @@
     <ul>
         {{ range .BasicInfo.Contacts }}
         <li class="contact__item">
+            {{ if eq .Type "link" }}
+            <i class="{{ .Icon }}"></i><span><a href="https://{{ .Info }}">{{ .Info | safeHTML }}</a></span>
+            {{ else if eq .Type "email" }}
+            <i class="{{ .Icon }}"></i><span><a href="mailto:{{ .Info }}">{{ .Info | safeHTML }}</a></span>
+            {{ else }}
             <i class="{{ .Icon }}"></i><span>{{ .Info | safeHTML }}</span>
+            {{ end }}
         </li>
         {{ end }}
     </ul>
